@@ -1,0 +1,708 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>いわて県民計画における政策分野と政策項目、幸福関連指標との関連性</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="29146e4d-ea45-8069-bceb-f0a6bbb785e5" class="page sans"><header><h1 class="page-title">いわて県民計画における政策分野と政策項目、幸福関連指標との関連性</h1><p class="page-description"></p></header><div class="page-body"><h3 id="29146e4d-ea45-80ae-90df-c0d521eec9a7" class="">〇　10個の政策分野（Ⅰ～Ⅹ）と50個の政策項目（１～50）</h3><p id="29146e4d-ea45-8085-83f4-f4b4c6661b06" class="">Ⅰ　健康・余暇<br/>　１　生涯にわたり心身ともに健やかに生活できる環境をつくります<br/>　２　必要に応じた医療を受けることができる体制を充実します<br/>　３　介護や支援が必要になっても、住み慣れた地域で安心して生活できる環境をつくります<br/>　４　幅広い分野の文化芸術に親しみ、生涯を通じてスポツを楽しむ機会を広げます<br/>　５　生涯を通じて学び続けられる場をつくります<br/>Ⅱ　家族・子育て<br/>　６　安心して子どもを生み育てられる環境をつくります<br/>　７　地域やコミュニティにおいて、学校と家庭、住民が協働して子どもの育ちと学びを支えます<br/>　８　健全で、自立した青少年を育成します<br/>　９　仕事と生活を両立できる環境をつくります<br/>　10　動物のいのちを大切にする社会をつくります<br/>Ⅲ　教育<br/>　11　【知育】児童生徒の確かな学力を育みます<br/>　12　【徳育】児童生徒の豊かな人間性と社会性を育みます<br/>　13　【体育】児童生徒の健やかな体を育みます<br/>　14　共に学び、共に育つ特別支援教育を進めます<br/>　15　いじめ問題などに適切に対応し、一人ひとりがお互いを尊重する学校をつくります<br/>　16　児童生徒が安全に学ぶことができる教育環境の整備や教職員の資質の向上を進めます<br/>　17　多様なニーズに応じた特色ある私学教育を充実します<br/>　18　地域に貢献する人材を育てます<br/>　19　文化芸術・スポーツを担う人材を育てます<br/>　20　高等教育機関と連携した地域づくり・人づくりを進めます<br/>Ⅳ　居住環境・コミュニティ<br/>　21　快適で豊かな暮らしを支える生活環境をつくります<br/>　22　地域の暮らしを支える公共交通を守ります<br/>　23　つながりや活力を感じられる地域コミュニティを守り育てます<br/>　24　岩手で暮らす魅力を高め、移住・定住を促進します<br/>　25　海外の多様な文化を理解し、共に生活できる地域づくりを進めます<br/>　26　文化芸術・スポーツを生かした地域をつくります<br/>Ⅴ　安全<br/>　27　自助、共助、公助による防災体制をつくります<br/>　28　事故や犯罪が少なく、安全・安心に暮らせるまちづくりを進めます<br/>　29　食の安全・安心を確保し、地域に根ざした食育を進めます<br/>　30　感染症による脅威から一人ひとりの暮らしを守ります<br/>Ⅵ　仕事・収入<br/>　31　ライフスタイルに応じた新しい働き方を通じて、一人ひとりの能力を発揮できる環境をつくります<br/>　32　地域経済を支える中小企業の振興を図ります<br/>　33　国際競争力が高く、地域の産業・雇用に好循環をもたらすものづくり産業を盛んにします<br/>　34　地域資源を生かした魅力ある産業を盛んにします<br/>　35　地域経済に好循環をもたらす観光産業を盛んにします<br/>　36　意欲と能力のある経営体を育成し、農林水産業の振興を図ります<br/>　37　収益力の高い「食料・木材供給基地」をつくります<br/>　38　農林水産物の付加価値を高め、販路を広げます<br/>　39　一人ひとりに合った暮らし方ができる農山漁村をつくります<br/>Ⅶ　歴史・文化<br/>　40　界遺産の保存と活用を進めます<br/>　41　豊かな歴史や民俗芸能などの伝統文化が受け継がれる環境をつくり、交流を広げます<br/>Ⅷ　自然環境<br/>　42　多様で優れた環境を守り、次世代に引き継ぎます<br/>　43　循環型地域社会の形成を進めます<br/>　44　地球温暖化防止に向け、脱炭素社会の形成を進めます<br/>Ⅸ　社会基盤<br/>　45　科学・情報技術を活用できる基盤を強化します<br/>　46　安全・安心を支える社会資本を整備します<br/>　47　産業や観光振興の基盤となる社会資本を整備します<br/>　48　生活を支える社会資本を良好に維持管理し、次世代に引き継ぎます<br/>Ⅹ　参画<br/>　49　性別や年齢、障がいの有無にかかわらず活躍できる社会をつくります<br/>　50　幅広い市民活動や多様な主体による県民運動を促進します</p><h3 id="29146e4d-ea45-8089-a245-ca440368fe93" class=""><strong>〇　いわて幸福関連指標一覧</strong></h3><table id="29146e4d-ea45-80d0-8a98-ecf0380da249" class="simple-table"><tbody><tr id="29146e4d-ea45-8092-8432-f11b210ac07d"><td id="b&gt;Ek" class="block-color-gray_background">政策分野</td><td id="H=td" class="block-color-gray_background" style="width:82px">関連する政策項目</td><td id="Z~DC" class="block-color-gray_background" style="width:97px">いわて幸福関連指標</td><td id="GUOB" class="block-color-gray_background">指標名</td><td id="EGzK" class="block-color-gray_background" style="width:48px">単位</td><td id="&gt;eVN" class="block-color-gray_background" style="width:84px">現状値<br/>R3</td><td id="`pec" class="block-color-gray_background" style="width:94px">年度目標値<br/>R5</td><td id="Q=MM" class="block-color-gray_background" style="width:89px">年度目標値<br/>R6</td><td id="UH?o" class="block-color-gray_background" style="width:95px">年度目標値<br/>R7</td><td id="qVvt" class="block-color-gray_background" style="width:91px">計画目標値<br/>R8</td></tr><tr id="29146e4d-ea45-8031-8fa2-deda4df48db2"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1～3</td><td id="Z~DC" class="" style="width:97px">1</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">健康寿命[平均自立期間]</a></td><td id="EGzK" class="" style="width:48px">年</td><td id="&gt;eVN" class="" style="width:84px">男② 80.03</td><td id="`pec" class="" style="width:94px">④ 80.42</td><td id="Q=MM" class="" style="width:89px">⑤ 80.61</td><td id="UH?o" class="" style="width:95px">⑥ 80.80</td><td id="qVvt" class="" style="width:91px">⑦ 81.00</td></tr><tr id="29146e4d-ea45-804a-accb-e4d43cdd826a"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1～3</td><td id="Z~DC" class="" style="width:97px">2</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">年</td><td id="&gt;eVN" class="" style="width:84px">女② 84.59</td><td id="`pec" class="" style="width:94px">④ 84.92</td><td id="Q=MM" class="" style="width:89px">⑤ 85.08</td><td id="UH?o" class="" style="width:95px">⑥ 85.24</td><td id="qVvt" class="" style="width:91px">⑦ 85.41</td></tr><tr id="29146e4d-ea45-80cb-a4ff-c622639b53a0"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1</td><td id="Z~DC" class="" style="width:97px">3</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼がん、心疾患及び脳血管疾患で死亡する人数[10万人当たり]</a></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">男② 283.4</td><td id="`pec" class="" style="width:94px">④ 266.6</td><td id="Q=MM" class="" style="width:89px">⑤ 259.6</td><td id="UH?o" class="" style="width:95px">⑥ 252.6</td><td id="qVvt" class="" style="width:91px">⑦ 245.8</td></tr><tr id="29146e4d-ea45-8064-a013-e0ff142393f3"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1</td><td id="Z~DC" class="" style="width:97px">4</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">女② 154.5</td><td id="`pec" class="" style="width:94px">④ 131.9</td><td id="Q=MM" class="" style="width:89px">⑤ 128.1</td><td id="UH?o" class="" style="width:95px">⑥ 124.5</td><td id="qVvt" class="" style="width:91px">⑦ 120.9</td></tr><tr id="29146e4d-ea45-80cd-a351-c9c0833b4069"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1</td><td id="Z~DC" class="" style="width:97px">5</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼自殺者数[10万人当たり]</a></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">16.2</td><td id="`pec" class="" style="width:94px">15.0</td><td id="Q=MM" class="" style="width:89px">14.9</td><td id="UH?o" class="" style="width:95px">14.7</td><td id="qVvt" class="" style="width:91px">14.6</td></tr><tr id="29146e4d-ea45-80a9-baab-c453eb698e6f"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">3</td><td id="Z~DC" class="" style="width:97px">6</td><td id="GUOB" class="">▼75歳以上85歳未満高齢者の要介護認定率</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">12.3</td><td id="`pec" class="" style="width:94px">11.9</td><td id="Q=MM" class="" style="width:89px">11.7</td><td id="UH?o" class="" style="width:95px">11.5</td><td id="qVvt" class="" style="width:91px">11.3</td></tr><tr id="29146e4d-ea45-8027-a1b3-da362d9e5d62"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">3</td><td id="Z~DC" class="" style="width:97px">7</td><td id="GUOB" class="">訪問診療（歯科を含む）・看護を受けた患者数（10万人当たり）</td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">② 6,508</td><td id="`pec" class="" style="width:94px">④ 6,781</td><td id="Q=MM" class="" style="width:89px">⑤ 6,921</td><td id="UH?o" class="" style="width:95px">⑥ 7,064</td><td id="qVvt" class="" style="width:91px">⑦ 7,210</td></tr><tr id="29146e4d-ea45-8039-8ed1-ecb3fca1bb48"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">4,5</td><td id="Z~DC" class="" style="width:97px">8</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆余暇時間[一日当たり]※休日を含む１週間の平均</a></td><td id="EGzK" class="" style="width:48px">分</td><td id="&gt;eVN" class="" style="width:84px">372</td><td id="`pec" class="" style="width:94px">382</td><td id="Q=MM" class="" style="width:89px">382</td><td id="UH?o" class="" style="width:95px">382</td><td id="qVvt" class="" style="width:91px">382</td></tr><tr id="29146e4d-ea45-8094-af54-d149fb6ad14f"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">4</td><td id="Z~DC" class="" style="width:97px">9</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">県内の公立文化施設における催事数※岩手県内公立文化施設協議会加盟施設のうち、各市所在の主な14施設の催事数</a></td><td id="EGzK" class="" style="width:48px">件</td><td id="&gt;eVN" class="" style="width:84px">-</td><td id="`pec" class="" style="width:94px">1,223</td><td id="Q=MM" class="" style="width:89px">1,305</td><td id="UH?o" class="" style="width:95px">1,388</td><td id="qVvt" class="" style="width:91px">1,471</td></tr><tr id="29146e4d-ea45-8084-a454-e9902375fac4"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">4</td><td id="Z~DC" class="" style="width:97px">10</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">スポーツ実施率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">② 65.4</td><td id="`pec" class="" style="width:94px">④ 67.2</td><td id="Q=MM" class="" style="width:89px">⑤ 68.2</td><td id="UH?o" class="" style="width:95px">⑥ 69.1</td><td id="qVvt" class="" style="width:91px">⑦ 70.0</td></tr><tr id="29146e4d-ea45-80a1-806d-d03db535d746"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">5</td><td id="Z~DC" class="" style="width:97px">11</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">生涯学習に取り組んでいる人の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">46.1</td><td id="`pec" class="" style="width:94px">47.0</td><td id="Q=MM" class="" style="width:89px">48.0</td><td id="UH?o" class="" style="width:95px">49.0</td><td id="qVvt" class="" style="width:91px">50.0</td></tr><tr id="29146e4d-ea45-80e9-a1f9-c1aab36b6c01"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1～3</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">健康寿命[日常生活に制限のない期間]</td><td id="EGzK" class="" style="width:48px">年</td><td id="&gt;eVN" class="" style="width:84px">男① 71.39</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-809d-a46b-f26edf56cc52"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1～3</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">年</td><td id="&gt;eVN" class="" style="width:84px">女① 74.69</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80c0-b712-c35d8c647fa5"><td id="b&gt;Ek" class="">Ⅰ　健康・余暇</td><td id="H=td" class="" style="width:82px">1</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">喫煙率</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">① 20.9</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80c5-9405-d6b877e371f2"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">6</td><td id="Z~DC" class="" style="width:97px">12</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">合計特殊出生率</a></td><td id="EGzK" class="" style="width:48px"></td><td id="&gt;eVN" class="" style="width:84px">1.30</td><td id="`pec" class="" style="width:94px">1.35</td><td id="Q=MM" class="" style="width:89px">1.42</td><td id="UH?o" class="" style="width:95px">1.50</td><td id="qVvt" class="" style="width:91px">1.58</td></tr><tr id="29146e4d-ea45-8022-aaf9-dd4a47edd88d"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">6,9</td><td id="Z~DC" class="" style="width:97px">13</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼待機児童数[４月１日時点]</a></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">12</td><td id="`pec" class="" style="width:94px">0</td><td id="Q=MM" class="" style="width:89px">0</td><td id="UH?o" class="" style="width:95px">0</td><td id="qVvt" class="" style="width:91px">0</td></tr><tr id="29146e4d-ea45-8011-bd53-fe33f86e8341"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">7,8</td><td id="Z~DC" class="" style="width:97px">14</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆地域の行事に参加している生徒の割合[中学生]</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">62.9</td><td id="`pec" class="" style="width:94px">64.0</td><td id="Q=MM" class="" style="width:89px">64.0</td><td id="UH?o" class="" style="width:95px">64.0</td><td id="qVvt" class="" style="width:91px">64.0</td></tr><tr id="29146e4d-ea45-802e-8b4f-ee3edeefb2d6"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">9,31</td><td id="Z~DC" class="" style="width:97px">15</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼総実労働時間[年間]</a></td><td id="EGzK" class="" style="width:48px">時間</td><td id="&gt;eVN" class="" style="width:84px">1,761.6</td><td id="`pec" class="" style="width:94px">1,710.1</td><td id="Q=MM" class="" style="width:89px">1,684.4</td><td id="UH?o" class="" style="width:95px">1,658.7</td><td id="qVvt" class="" style="width:91px">1,633.0</td></tr><tr id="29146e4d-ea45-8050-825e-f1abf8c09605"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">9,49</td><td id="Z~DC" class="" style="width:97px">16</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">共働き世帯の男性の家事時間割合[週平均]※女性の家事時間に対する割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">39.2</td><td id="`pec" class="" style="width:94px">42.5</td><td id="Q=MM" class="" style="width:89px">45.0</td><td id="UH?o" class="" style="width:95px">47.5</td><td id="qVvt" class="" style="width:91px">50.0</td></tr><tr id="29146e4d-ea45-8030-823f-e268f6ca7ac6"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">10</td><td id="Z~DC" class="" style="width:97px">17</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">犬、猫の返還・譲渡率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">犬  100.0</td><td id="`pec" class="" style="width:94px">100.0</td><td id="Q=MM" class="" style="width:89px">100.0</td><td id="UH?o" class="" style="width:95px">100.0</td><td id="qVvt" class="" style="width:91px">100.0</td></tr><tr id="29146e4d-ea45-8064-985c-e29900012a6a"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">10</td><td id="Z~DC" class="" style="width:97px">18</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">猫  98.8</td><td id="`pec" class="" style="width:94px">99.1</td><td id="Q=MM" class="" style="width:89px">99.4</td><td id="UH?o" class="" style="width:95px">99.7</td><td id="qVvt" class="" style="width:91px">100.0</td></tr><tr id="29146e4d-ea45-80ba-9e2b-deca579732ce"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">9</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">共働き男性の家事時間</td><td id="EGzK" class="" style="width:48px">分</td><td id="&gt;eVN" class="" style="width:84px">125</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80ea-8031-d8c1068e8453"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">9</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">共働き女性の家事時間</td><td id="EGzK" class="" style="width:48px">分</td><td id="&gt;eVN" class="" style="width:84px">319</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-809e-9222-e8062faac7ab"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">6</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">50歳時未婚率</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">男 ② 29.61</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8025-afe5-f1176c9818f2"><td id="b&gt;Ek" class="">Ⅱ　家族・子育て</td><td id="H=td" class="" style="width:82px">6</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">女 ② 16.70</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8003-896a-fe61cc5214f8"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11,16</td><td id="Z~DC" class="" style="width:97px">19</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆意欲を持って自ら進んで学ぼうとする児童生徒の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小  82.5</td><td id="`pec" class="" style="width:94px">82.5</td><td id="Q=MM" class="" style="width:89px">82.5</td><td id="UH?o" class="" style="width:95px">82.5</td><td id="qVvt" class="" style="width:91px">82.5</td></tr><tr id="29146e4d-ea45-80d0-aa0f-ebe07523c018"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11,16</td><td id="Z~DC" class="" style="width:97px">20</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中  85.4</td><td id="`pec" class="" style="width:94px">85.4</td><td id="Q=MM" class="" style="width:89px">85.4</td><td id="UH?o" class="" style="width:95px">85.4</td><td id="qVvt" class="" style="width:91px">85.4</td></tr><tr id="29146e4d-ea45-808e-a446-cede0ae7c9b4"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11,16</td><td id="Z~DC" class="" style="width:97px">21</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆授業で、自分の考えを深めたり広げたりしている児童生徒の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小  83.0</td><td id="`pec" class="" style="width:94px">83.0</td><td id="Q=MM" class="" style="width:89px">83.0</td><td id="UH?o" class="" style="width:95px">83.0</td><td id="qVvt" class="" style="width:91px">83.0</td></tr><tr id="29146e4d-ea45-80fb-bb91-eec6292fb3c9"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11,16</td><td id="Z~DC" class="" style="width:97px">22</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中  83.5</td><td id="`pec" class="" style="width:94px">83.5</td><td id="Q=MM" class="" style="width:89px">83.5</td><td id="UH?o" class="" style="width:95px">83.5</td><td id="qVvt" class="" style="width:91px">83.5</td></tr><tr id="29146e4d-ea45-8095-96b0-f89d07ae013c"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,15</td><td id="Z~DC" class="" style="width:97px">23</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">人が困っているときは、進んで助けようと思う児童生徒の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">◆小  68</td><td id="`pec" class="" style="width:94px">70</td><td id="Q=MM" class="" style="width:89px">70</td><td id="UH?o" class="" style="width:95px">70</td><td id="qVvt" class="" style="width:91px">70</td></tr><tr id="29146e4d-ea45-8060-88c5-eaa2cf87521f"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,15</td><td id="Z~DC" class="" style="width:97px">24</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">◆中  67</td><td id="`pec" class="" style="width:94px">68</td><td id="Q=MM" class="" style="width:89px">68</td><td id="UH?o" class="" style="width:95px">68</td><td id="qVvt" class="" style="width:91px">68</td></tr><tr id="29146e4d-ea45-80ff-9531-d1db7ace59b0"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,15</td><td id="Z~DC" class="" style="width:97px">25</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">高  62</td><td id="`pec" class="" style="width:94px">66</td><td id="Q=MM" class="" style="width:89px">67</td><td id="UH?o" class="" style="width:95px">68</td><td id="qVvt" class="" style="width:91px">70</td></tr><tr id="29146e4d-ea45-8083-91c1-fa8ac9af6d49"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,16</td><td id="Z~DC" class="" style="width:97px">26</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">自己肯定感を持つ児童生徒の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小  76.4</td><td id="`pec" class="" style="width:94px">78.0</td><td id="Q=MM" class="" style="width:89px">78.0</td><td id="UH?o" class="" style="width:95px">79.0</td><td id="qVvt" class="" style="width:91px">80.0</td></tr><tr id="29146e4d-ea45-80a0-b32e-daa0a0efa779"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,16</td><td id="Z~DC" class="" style="width:97px">27</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中  76.2</td><td id="`pec" class="" style="width:94px">78.5</td><td id="Q=MM" class="" style="width:89px">78.5</td><td id="UH?o" class="" style="width:95px">79.0</td><td id="qVvt" class="" style="width:91px">79.0</td></tr><tr id="29146e4d-ea45-8057-895e-f865db420350"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">13</td><td id="Z~DC" class="" style="width:97px">28</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆体力・運動能力が標準以上の児童生徒の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小 男  68.9</td><td id="`pec" class="" style="width:94px">70.0</td><td id="Q=MM" class="" style="width:89px">70.0</td><td id="UH?o" class="" style="width:95px">70.0</td><td id="qVvt" class="" style="width:91px">70.0</td></tr><tr id="29146e4d-ea45-8068-8193-fc11290b7797"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">13</td><td id="Z~DC" class="" style="width:97px">29</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小 女  79.1</td><td id="`pec" class="" style="width:94px">80.0</td><td id="Q=MM" class="" style="width:89px">80.0</td><td id="UH?o" class="" style="width:95px">80.0</td><td id="qVvt" class="" style="width:91px">80.0</td></tr><tr id="29146e4d-ea45-80ab-81fc-e5309eec59c6"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">13</td><td id="Z~DC" class="" style="width:97px">30</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中 男  74.8</td><td id="`pec" class="" style="width:94px">75.0</td><td id="Q=MM" class="" style="width:89px">75.0</td><td id="UH?o" class="" style="width:95px">75.0</td><td id="qVvt" class="" style="width:91px">75.0</td></tr><tr id="29146e4d-ea45-8058-abbe-d0d33ac5ecbb"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">13</td><td id="Z~DC" class="" style="width:97px">31</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中 女  88.8</td><td id="`pec" class="" style="width:94px">90.0</td><td id="Q=MM" class="" style="width:89px">90.0</td><td id="UH?o" class="" style="width:95px">90.0</td><td id="qVvt" class="" style="width:91px">90.0</td></tr><tr id="29146e4d-ea45-809b-b05f-fa9011c4b1e4"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">14,16</td><td id="Z~DC" class="" style="width:97px">32</td><td id="GUOB" class="">◆特別支援学校が適切な指導・支援を行っていると感じる保護者の割合</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">96.0</td><td id="`pec" class="" style="width:94px">96.0</td><td id="Q=MM" class="" style="width:89px">96.0</td><td id="UH?o" class="" style="width:95px">96.0</td><td id="qVvt" class="" style="width:91px">96.0</td></tr><tr id="29146e4d-ea45-80fc-b230-da9d891e6ee9"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">17,18,31</td><td id="Z~DC" class="" style="width:97px">33</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆高卒者の県内就職率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">74.1</td><td id="`pec" class="" style="width:94px">84.5</td><td id="Q=MM" class="" style="width:89px">84.5</td><td id="UH?o" class="" style="width:95px">84.5</td><td id="qVvt" class="" style="width:91px">84.5</td></tr><tr id="29146e4d-ea45-801b-98fd-f9cb56e7abb3"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">18,19</td><td id="Z~DC" class="" style="width:97px">34</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">将来の夢や目標を持っている児童生徒の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小  82.1</td><td id="`pec" class="" style="width:94px">83.0</td><td id="Q=MM" class="" style="width:89px">83.3</td><td id="UH?o" class="" style="width:95px">83.6</td><td id="qVvt" class="" style="width:91px">84.0</td></tr><tr id="29146e4d-ea45-8053-a6c8-d4fd2b5f6ea9"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">18,19</td><td id="Z~DC" class="" style="width:97px">35</td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中  72.8</td><td id="`pec" class="" style="width:94px">73.8</td><td id="Q=MM" class="" style="width:89px">74.5</td><td id="UH?o" class="" style="width:95px">75.2</td><td id="qVvt" class="" style="width:91px">76.0</td></tr><tr id="29146e4d-ea45-80ac-a560-fee088a38a1c"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">18,20</td><td id="Z~DC" class="" style="width:97px">36</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">県内大学等卒業者の県内就職率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">47.0</td><td id="`pec" class="" style="width:94px">48.5</td><td id="Q=MM" class="" style="width:89px">49.0</td><td id="UH?o" class="" style="width:95px">49.5</td><td id="qVvt" class="" style="width:91px">50.0</td></tr><tr id="29146e4d-ea45-80b9-b59d-c6b889b1dd24"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">学力が全国水準未満の児童生徒の割合</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小 国語  50</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80df-9891-f167bd9feec9"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">小 算数  42</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80a2-8479-fa0b9778604c"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中 国語  37</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-803b-9d46-f1e53859233a"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">11</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">中 数学  57</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8083-a071-c00b5862bf5d"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,15,16</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">不登校児童生徒数[千人当たり]</td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">小　8.4</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80e4-9396-dc418150ea20"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,15,16</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">中　39.6</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8092-bca8-ffd71560a385"><td id="b&gt;Ek" class="">Ⅲ　教育</td><td id="H=td" class="" style="width:82px">12,15,16</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class=""></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">高　19.8</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-804d-8303-daffea95e38e"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">21,24</td><td id="Z~DC" class="" style="width:97px">37</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">県外からの移住・定住者数</a></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">1,584</td><td id="`pec" class="" style="width:94px">1,830</td><td id="Q=MM" class="" style="width:89px">2,030</td><td id="UH?o" class="" style="width:95px">2,250</td><td id="qVvt" class="" style="width:91px">2,500</td></tr><tr id="29146e4d-ea45-802d-a05b-c7db80a0e0e0"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">21</td><td id="Z~DC" class="" style="width:97px">38</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">汚水処理人口普及率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">84.4</td><td id="`pec" class="" style="width:94px">87.9</td><td id="Q=MM" class="" style="width:89px">89.4</td><td id="UH?o" class="" style="width:95px">91.0</td><td id="qVvt" class="" style="width:91px">91.1</td></tr><tr id="29146e4d-ea45-8031-aa84-f3d8b04cf4ab"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">22</td><td id="Z~DC" class="" style="width:97px">39</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">三セク鉄道・バスの一人当たり年間利用回数</a></td><td id="EGzK" class="" style="width:48px">回</td><td id="&gt;eVN" class="" style="width:84px">10.2</td><td id="`pec" class="" style="width:94px">14.3</td><td id="Q=MM" class="" style="width:89px">16.3</td><td id="UH?o" class="" style="width:95px">16.4</td><td id="qVvt" class="" style="width:91px">16.5</td></tr><tr id="29146e4d-ea45-8085-8d22-caeb2d6b7485"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">23</td><td id="Z~DC" class="" style="width:97px">40</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">地縁的な活動への参加割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">33.3</td><td id="`pec" class="" style="width:94px">36.0</td><td id="Q=MM" class="" style="width:89px">38.5</td><td id="UH?o" class="" style="width:95px">41.5</td><td id="qVvt" class="" style="width:91px">44.5</td></tr><tr id="29146e4d-ea45-80b0-9c68-dd927e8f84b2"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">25</td><td id="Z~DC" class="" style="width:97px">41</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">在留外国人数[10万人当たり]</a></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">597.0</td><td id="`pec" class="" style="width:94px">693.0</td><td id="Q=MM" class="" style="width:89px">743.8</td><td id="UH?o" class="" style="width:95px">795.7</td><td id="qVvt" class="" style="width:91px">849.2</td></tr><tr id="29146e4d-ea45-80b2-8ed8-e2c110775ea0"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">26</td><td id="Z~DC" class="" style="width:97px">42</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">（文化施設入場者数）※岩手県内公立文化施設協議会加盟施設で行う自主催事入場者数</a></td><td id="EGzK" class="" style="width:48px">千人</td><td id="&gt;eVN" class="" style="width:84px">② 33</td><td id="`pec" class="" style="width:94px">④ 126</td><td id="Q=MM" class="" style="width:89px">⑤ 145</td><td id="UH?o" class="" style="width:95px">⑥ 165</td><td id="qVvt" class="" style="width:91px">⑦ 185</td></tr><tr id="29146e4d-ea45-8004-99c7-ed3844304350"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">26</td><td id="Z~DC" class="" style="width:97px">43</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">（スポーツ施設入場者数）※県及び県内市町村の公立スポーツ・レクリエーション施設入場者数</a></td><td id="EGzK" class="" style="width:48px">万人</td><td id="&gt;eVN" class="" style="width:84px">486</td><td id="`pec" class="" style="width:94px">594</td><td id="Q=MM" class="" style="width:89px">649</td><td id="UH?o" class="" style="width:95px">703</td><td id="qVvt" class="" style="width:91px">757</td></tr><tr id="29146e4d-ea45-808a-9afd-d187ba2f9ba9"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">22</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">三セク鉄道・バスの年間利用者数</td><td id="EGzK" class="" style="width:48px">万人</td><td id="&gt;eVN" class="" style="width:84px">1,214</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80a8-aead-f2ea43ecc5b5"><td id="b&gt;Ek" class="">Ⅳ　居住環境・コミュニティ</td><td id="H=td" class="" style="width:82px">21</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">持ち家比率</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">㉚ 69.9</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80df-9d71-fa35a545c68e"><td id="b&gt;Ek" class="">Ⅴ　安全</td><td id="H=td" class="" style="width:82px">27</td><td id="Z~DC" class="" style="width:97px">44</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">自主防災組織の組織率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">88.5</td><td id="`pec" class="" style="width:94px">89.8</td><td id="Q=MM" class="" style="width:89px">90.4</td><td id="UH?o" class="" style="width:95px">91.0</td><td id="qVvt" class="" style="width:91px">91.8</td></tr><tr id="29146e4d-ea45-8030-bbc9-f5cd8e5cbd19"><td id="b&gt;Ek" class="">Ⅴ　安全</td><td id="H=td" class="" style="width:82px">28</td><td id="Z~DC" class="" style="width:97px">45</td><td id="GUOB" class="">▼刑法犯認知件数</td><td id="EGzK" class="" style="width:48px">件</td><td id="&gt;eVN" class="" style="width:84px">2,507</td><td id="`pec" class="" style="width:94px">2,560</td><td id="Q=MM" class="" style="width:89px">2,470</td><td id="UH?o" class="" style="width:95px">2,380</td><td id="qVvt" class="" style="width:91px">2,300</td></tr><tr id="29146e4d-ea45-80e0-8f46-e1050e4b8358"><td id="b&gt;Ek" class="">Ⅴ　安全</td><td id="H=td" class="" style="width:82px">28</td><td id="Z~DC" class="" style="width:97px">46</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼交通事故発生件数[千人当たり]</a></td><td id="EGzK" class="" style="width:48px">件</td><td id="&gt;eVN" class="" style="width:84px">1.29</td><td id="`pec" class="" style="width:94px">1.23</td><td id="Q=MM" class="" style="width:89px">1.18</td><td id="UH?o" class="" style="width:95px">1.14</td><td id="qVvt" class="" style="width:91px">1.10</td></tr><tr id="29146e4d-ea45-809c-b124-e9be9bd80371"><td id="b&gt;Ek" class="">Ⅴ　安全</td><td id="H=td" class="" style="width:82px">29</td><td id="Z~DC" class="" style="width:97px">47</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆食中毒の発生人数[10万人当たり]</a></td><td id="EGzK" class="" style="width:48px">人</td><td id="&gt;eVN" class="" style="width:84px">1.3</td><td id="`pec" class="" style="width:94px">7.3</td><td id="Q=MM" class="" style="width:89px">7.3</td><td id="UH?o" class="" style="width:95px">7.3</td><td id="qVvt" class="" style="width:91px">7.3</td></tr><tr id="29146e4d-ea45-80c3-afad-c468607314f2"><td id="b&gt;Ek" class="">Ⅴ　安全</td><td id="H=td" class="" style="width:82px">30</td><td id="Z~DC" class="" style="width:97px">48</td><td id="GUOB" class="">新興感染症に対応可能な公立・公的医療機関等の数</td><td id="EGzK" class="" style="width:48px">機関</td><td id="&gt;eVN" class="" style="width:84px">-</td><td id="`pec" class="" style="width:94px">27</td><td id="Q=MM" class="" style="width:89px">37</td><td id="UH?o" class="" style="width:95px">50</td><td id="qVvt" class="" style="width:91px">60</td></tr><tr id="29146e4d-ea45-806a-86c7-f55c5bb2c09d"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">31～39</td><td id="Z~DC" class="" style="width:97px">49</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆一人当たり県民所得の水準※全国を100とした水準</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">① 87.4</td><td id="`pec" class="" style="width:94px">③ 90.0</td><td id="Q=MM" class="" style="width:89px">④ 90.0</td><td id="UH?o" class="" style="width:95px">⑤ 90.0</td><td id="qVvt" class="" style="width:91px">⑥ 90.0</td></tr><tr id="29146e4d-ea45-801b-8102-d97ba11b4089"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">31～35</td><td id="Z~DC" class="" style="width:97px">50</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆正社員の有効求人倍率</a></td><td id="EGzK" class="" style="width:48px">倍</td><td id="&gt;eVN" class="" style="width:84px">0.88</td><td id="`pec" class="" style="width:94px">1.00</td><td id="Q=MM" class="" style="width:89px">1.00</td><td id="UH?o" class="" style="width:95px">1.00</td><td id="qVvt" class="" style="width:91px">1.00</td></tr><tr id="29146e4d-ea45-8022-a54b-e8adae1efad3"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">9,31</td><td id="Z~DC" class="" style="width:97px">51</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼総実労働時間[年間]【再掲】</a></td><td id="EGzK" class="" style="width:48px">時間</td><td id="&gt;eVN" class="" style="width:84px">1,761.6</td><td id="`pec" class="" style="width:94px">1,710.1</td><td id="Q=MM" class="" style="width:89px">1,684.4</td><td id="UH?o" class="" style="width:95px">1,658.7</td><td id="qVvt" class="" style="width:91px">1,633.0</td></tr><tr id="29146e4d-ea45-80aa-aa14-d7428d3cc7df"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">31</td><td id="Z~DC" class="" style="width:97px">52</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆完全失業率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">2.4</td><td id="`pec" class="" style="width:94px">2.0</td><td id="Q=MM" class="" style="width:89px">2.0</td><td id="UH?o" class="" style="width:95px">2.0</td><td id="qVvt" class="" style="width:91px">2.0</td></tr><tr id="29146e4d-ea45-801f-b12f-fc294b81a67d"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">17,18,31</td><td id="Z~DC" class="" style="width:97px">53</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆高卒者の県内就職率【再掲】</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">74.1</td><td id="`pec" class="" style="width:94px">84.5</td><td id="Q=MM" class="" style="width:89px">84.5</td><td id="UH?o" class="" style="width:95px">84.5</td><td id="qVvt" class="" style="width:91px">84.5</td></tr><tr id="29146e4d-ea45-80e6-b457-c885e4ea5d23"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">31,32,49</td><td id="Z~DC" class="" style="width:97px">54</td><td id="GUOB" class="">女性の全国との賃金格差※全国を100とした水準</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">84.4</td><td id="`pec" class="" style="width:94px">85.8</td><td id="Q=MM" class="" style="width:89px">87.0</td><td id="UH?o" class="" style="width:95px">88.2</td><td id="qVvt" class="" style="width:91px">89.4</td></tr><tr id="29146e4d-ea45-806d-9a4a-e3478472e08a"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">32</td><td id="Z~DC" class="" style="width:97px">55</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">従業者一人当たりの付加価値額</a></td><td id="EGzK" class="" style="width:48px">千円</td><td id="&gt;eVN" class="" style="width:84px">② 5,717</td><td id="`pec" class="" style="width:94px">④ 5,831</td><td id="Q=MM" class="" style="width:89px">⑤ 5,889</td><td id="UH?o" class="" style="width:95px">⑥ 5,947</td><td id="qVvt" class="" style="width:91px">⑦ 6,006</td></tr><tr id="29146e4d-ea45-8038-9649-fdcd83f9ea61"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">32</td><td id="Z~DC" class="" style="width:97px">56</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">開業率※雇用保険が新規に成立した事業所の比率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">② 3.2</td><td id="`pec" class="" style="width:94px">④ 3.3</td><td id="Q=MM" class="" style="width:89px">⑤ 3.4</td><td id="UH?o" class="" style="width:95px">⑥ 3.5</td><td id="qVvt" class="" style="width:91px">⑦ 3.6</td></tr><tr id="29146e4d-ea45-8031-9e22-f48c28b8df2d"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">33,34</td><td id="Z~DC" class="" style="width:97px">57</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">従業者一人当たりの製造品出荷額</a></td><td id="EGzK" class="" style="width:48px">百万円</td><td id="&gt;eVN" class="" style="width:84px">② 29.6</td><td id="`pec" class="" style="width:94px">③ 29.9</td><td id="Q=MM" class="" style="width:89px">④ 30.3</td><td id="UH?o" class="" style="width:95px">⑤ 30.6</td><td id="qVvt" class="" style="width:91px">⑥ 31.0</td></tr><tr id="29146e4d-ea45-8053-a2b8-db8cd38b4959"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">35</td><td id="Z~DC" class="" style="width:97px">58</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">観光消費額</a></td><td id="EGzK" class="" style="width:48px">億円</td><td id="&gt;eVN" class="" style="width:84px">② 1,142.3</td><td id="`pec" class="" style="width:94px">1,657.7</td><td id="Q=MM" class="" style="width:89px">1,829.5</td><td id="UH?o" class="" style="width:95px">1,936.2</td><td id="qVvt" class="" style="width:91px">2,042.9</td></tr><tr id="29146e4d-ea45-8009-8bf4-d32d6bf900ec"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">36,37</td><td id="Z~DC" class="" style="width:97px">59</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">農業経営体一経営体当たりの農業総産出額</a></td><td id="EGzK" class="" style="width:48px">千円</td><td id="&gt;eVN" class="" style="width:84px">② 5,312</td><td id="`pec" class="" style="width:94px">④ 5,390</td><td id="Q=MM" class="" style="width:89px">⑤ 5,530</td><td id="UH?o" class="" style="width:95px">⑥ 5,670</td><td id="qVvt" class="" style="width:91px">⑦ 5,810</td></tr><tr id="29146e4d-ea45-8007-ac34-f24e0c636947"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">36,37</td><td id="Z~DC" class="" style="width:97px">60</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">林業就業者一人当たりの木材生産産出額</a></td><td id="EGzK" class="" style="width:48px">千円</td><td id="&gt;eVN" class="" style="width:84px">② 4,377</td><td id="`pec" class="" style="width:94px">④ 4,700</td><td id="Q=MM" class="" style="width:89px">⑤ 4,770</td><td id="UH?o" class="" style="width:95px">⑥ 4,840</td><td id="qVvt" class="" style="width:91px">⑦ 4,910</td></tr><tr id="29146e4d-ea45-8060-8946-fdf46826df75"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">36,37</td><td id="Z~DC" class="" style="width:97px">61</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">漁業経営体一経営体当たりの海面漁業・養殖業産出額</a></td><td id="EGzK" class="" style="width:48px">千円</td><td id="&gt;eVN" class="" style="width:84px">② 4,179</td><td id="`pec" class="" style="width:94px">④ 3,930</td><td id="Q=MM" class="" style="width:89px">⑤ 4,020</td><td id="UH?o" class="" style="width:95px">⑥ 4,110</td><td id="qVvt" class="" style="width:91px">⑦ 4,200</td></tr><tr id="29146e4d-ea45-8060-81ef-d9e259819c6e"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">38</td><td id="Z~DC" class="" style="width:97px">62</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">農林水産物の輸出額</a></td><td id="EGzK" class="" style="width:48px">億円</td><td id="&gt;eVN" class="" style="width:84px">43.0</td><td id="`pec" class="" style="width:94px">52.0</td><td id="Q=MM" class="" style="width:89px">57.0</td><td id="UH?o" class="" style="width:95px">63.0</td><td id="qVvt" class="" style="width:91px">69.0</td></tr><tr id="29146e4d-ea45-8073-8000-fd29398305da"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">39</td><td id="Z~DC" class="" style="width:97px">63</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">グリーン・ツーリズム交流人口</a></td><td id="EGzK" class="" style="width:48px">千人回</td><td id="&gt;eVN" class="" style="width:84px">1,090</td><td id="`pec" class="" style="width:94px">1,160</td><td id="Q=MM" class="" style="width:89px">1,200</td><td id="UH?o" class="" style="width:95px">1,210</td><td id="qVvt" class="" style="width:91px">1,220</td></tr><tr id="29146e4d-ea45-80f2-bc59-c33f299e47d3"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">31～35</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">非正規職員・従業員率</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">㉙ 35.7</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8051-b9b3-f01fce5b1e24"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">31～39</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">雇用者一人当たり雇用者報酬</td><td id="EGzK" class="" style="width:48px">千円</td><td id="&gt;eVN" class="" style="width:84px">① 4,043</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80ba-a10f-f828ffe62f07"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">31～39</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">現金給与総額[５人以上、毎月]</td><td id="EGzK" class="" style="width:48px">円</td><td id="&gt;eVN" class="" style="width:84px">282,811</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8059-b7da-ec0fc56423bd"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">36,37</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">農業産出額</td><td id="EGzK" class="" style="width:48px">億円</td><td id="&gt;eVN" class="" style="width:84px">2,651</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8085-b88b-faa0f1c5daca"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">36,37</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">林業産出額</td><td id="EGzK" class="" style="width:48px">千万円</td><td id="&gt;eVN" class="" style="width:84px">② 1,782</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80a2-b6a2-ce1ed13d7779"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">36,37</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">漁業産出額</td><td id="EGzK" class="" style="width:48px">千万円</td><td id="&gt;eVN" class="" style="width:84px">② 3,057</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80de-8610-ff7313f80a53"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">33,34</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">製造品出荷額</td><td id="EGzK" class="" style="width:48px">億円</td><td id="&gt;eVN" class="" style="width:84px">② 24,943</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80c4-a7ea-f0988a2189d8"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">33</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">ものづくり関連分野の製造出荷額</td><td id="EGzK" class="" style="width:48px">億円</td><td id="&gt;eVN" class="" style="width:84px">② 16,830</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8052-9927-c7c114c27cf1"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">34</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">食料品製造出荷額</td><td id="EGzK" class="" style="width:48px">億円</td><td id="&gt;eVN" class="" style="width:84px">② 3,769</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80c0-b4d0-d16543a4965c"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">34,38</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">水産加工品製造出荷額</td><td id="EGzK" class="" style="width:48px">億円</td><td id="&gt;eVN" class="" style="width:84px">② 674</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80eb-a468-ed4d7ba95768"><td id="b&gt;Ek" class="">Ⅵ　仕事・収入</td><td id="H=td" class="" style="width:82px">32</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">事業所新設率</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">㉘～①11.7</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-8003-b0f9-cc796accc1a8"><td id="b&gt;Ek" class="">Ⅶ　歴史・文化</td><td id="H=td" class="" style="width:82px">40,41</td><td id="Z~DC" class="" style="width:97px">64</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">世界遺産等の来訪者数</a></td><td id="EGzK" class="" style="width:48px">千人</td><td id="&gt;eVN" class="" style="width:84px">417</td><td id="`pec" class="" style="width:94px">712</td><td id="Q=MM" class="" style="width:89px">805</td><td id="UH?o" class="" style="width:95px">898</td><td id="qVvt" class="" style="width:91px">991</td></tr><tr id="29146e4d-ea45-805a-82d8-fc32cf24d57c"><td id="b&gt;Ek" class="">Ⅶ　歴史・文化</td><td id="H=td" class="" style="width:82px">40,41</td><td id="Z~DC" class="" style="width:97px">65</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">国、県指定文化財件数</a></td><td id="EGzK" class="" style="width:48px">件</td><td id="&gt;eVN" class="" style="width:84px">574</td><td id="`pec" class="" style="width:94px">580</td><td id="Q=MM" class="" style="width:89px">583</td><td id="UH?o" class="" style="width:95px">586</td><td id="qVvt" class="" style="width:91px">589</td></tr><tr id="29146e4d-ea45-807b-80fa-f557e51850fc"><td id="b&gt;Ek" class="">Ⅶ　歴史・文化</td><td id="H=td" class="" style="width:82px">41</td><td id="Z~DC" class="" style="width:97px">66</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆民俗芸能ネットワーク加盟団体数</a></td><td id="EGzK" class="" style="width:48px">団体</td><td id="&gt;eVN" class="" style="width:84px">393</td><td id="`pec" class="" style="width:94px">393</td><td id="Q=MM" class="" style="width:89px">393</td><td id="UH?o" class="" style="width:95px">393</td><td id="qVvt" class="" style="width:91px">393</td></tr><tr id="29146e4d-ea45-8094-9227-c217fd658ea6"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">42</td><td id="Z~DC" class="" style="width:97px">67</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆岩手の代表的希少野生動植物の個体・つがい数（イヌワシつがい数）</a></td><td id="EGzK" class="" style="width:48px">ペア</td><td id="&gt;eVN" class="" style="width:84px">26</td><td id="`pec" class="" style="width:94px">26</td><td id="Q=MM" class="" style="width:89px">26</td><td id="UH?o" class="" style="width:95px">26</td><td id="qVvt" class="" style="width:91px">26</td></tr><tr id="29146e4d-ea45-8057-8488-e6598f4e42c9"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">42</td><td id="Z~DC" class="" style="width:97px">68</td><td id="GUOB" class="">◆岩手の代表的希少野生動植物の個体・つがい数（ハヤチネウスユキソウ個体数）</td><td id="EGzK" class="" style="width:48px">花茎</td><td id="&gt;eVN" class="" style="width:84px">④ 115</td><td id="`pec" class="" style="width:94px">115</td><td id="Q=MM" class="" style="width:89px">115</td><td id="UH?o" class="" style="width:95px">115</td><td id="qVvt" class="" style="width:91px">115</td></tr><tr id="29146e4d-ea45-80a7-80ff-cf39c579a6c3"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">42</td><td id="Z~DC" class="" style="width:97px">69</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">自然公園の利用者数※自然公園ビジターセンター等利用者数</a></td><td id="EGzK" class="" style="width:48px">千人</td><td id="&gt;eVN" class="" style="width:84px">339</td><td id="`pec" class="" style="width:94px">401</td><td id="Q=MM" class="" style="width:89px">431</td><td id="UH?o" class="" style="width:95px">462</td><td id="qVvt" class="" style="width:91px">493</td></tr><tr id="29146e4d-ea45-8026-b7bc-f48d99adfebc"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">42</td><td id="Z~DC" class="" style="width:97px">70</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆公共用水域のBOD（生物化学的酸素要求量）等環境基準達成率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">95.7</td><td id="`pec" class="" style="width:94px">95.7</td><td id="Q=MM" class="" style="width:89px">95.7</td><td id="UH?o" class="" style="width:95px">95.7</td><td id="qVvt" class="" style="width:91px">95.7</td></tr><tr id="29146e4d-ea45-806a-9eeb-d8128127961b"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">44</td><td id="Z~DC" class="" style="width:97px">71</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">再生可能エネルギーによる電力自給率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">38.6</td><td id="`pec" class="" style="width:94px">50.9</td><td id="Q=MM" class="" style="width:89px">51.0</td><td id="UH?o" class="" style="width:95px">53.8</td><td id="qVvt" class="" style="width:91px">56.2</td></tr><tr id="29146e4d-ea45-808f-89ac-e022062d737d"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">43</td><td id="Z~DC" class="" style="width:97px">72</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼一般廃棄物の最終処分量</a></td><td id="EGzK" class="" style="width:48px">千ｔ</td><td id="&gt;eVN" class="" style="width:84px">② 37.8</td><td id="`pec" class="" style="width:94px">④ 37.0</td><td id="Q=MM" class="" style="width:89px">⑤ 36.6</td><td id="UH?o" class="" style="width:95px">⑥ 36.2</td><td id="qVvt" class="" style="width:91px">⑦ 35.8</td></tr><tr id="29146e4d-ea45-80da-bd57-e498d026bf01"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">43</td><td id="Z~DC" class="" style="width:97px">73</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">▼一人１日当たり家庭系ごみ（資源になるものを除く）排出量</a></td><td id="EGzK" class="" style="width:48px">ｇ</td><td id="&gt;eVN" class="" style="width:84px">② 520</td><td id="`pec" class="" style="width:94px">④ 513</td><td id="Q=MM" class="" style="width:89px">⑤ 507</td><td id="UH?o" class="" style="width:95px">⑥ 500</td><td id="qVvt" class="" style="width:91px">⑦ 493</td></tr><tr id="29146e4d-ea45-804c-86c1-caa2635c908f"><td id="b&gt;Ek" class="">Ⅷ　自然環境</td><td id="H=td" class="" style="width:82px">42,44</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">森林面積割合</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">① 74.6</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr><tr id="29146e4d-ea45-80a1-9f11-d75b2aa4e3f8"><td id="b&gt;Ek" class="">Ⅸ　社会基盤</td><td id="H=td" class="" style="width:82px">45</td><td id="Z~DC" class="" style="width:97px">74</td><td id="GUOB" class="">インターネットの利用率</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">83.9</td><td id="`pec" class="" style="width:94px">86.4</td><td id="Q=MM" class="" style="width:89px">87.6</td><td id="UH?o" class="" style="width:95px">88.8</td><td id="qVvt" class="" style="width:91px">90.0</td></tr><tr id="29146e4d-ea45-80ae-858f-c4d913626aae"><td id="b&gt;Ek" class="">Ⅸ　社会基盤</td><td id="H=td" class="" style="width:82px">46</td><td id="Z~DC" class="" style="width:97px">75</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">河川整備率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">51.9</td><td id="`pec" class="" style="width:94px">52.3</td><td id="Q=MM" class="" style="width:89px">52.4</td><td id="UH?o" class="" style="width:95px">52.5</td><td id="qVvt" class="" style="width:91px">52.7</td></tr><tr id="29146e4d-ea45-8033-9861-fb20ed2ef936"><td id="b&gt;Ek" class="">Ⅸ　社会基盤</td><td id="H=td" class="" style="width:82px">46,48</td><td id="Z~DC" class="" style="width:97px">76</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">緊急輸送道路の整備延長</a></td><td id="EGzK" class="" style="width:48px">㎞</td><td id="&gt;eVN" class="" style="width:84px">32.5</td><td id="`pec" class="" style="width:94px">38.1</td><td id="Q=MM" class="" style="width:89px">39.4</td><td id="UH?o" class="" style="width:95px">40.5</td><td id="qVvt" class="" style="width:91px">42.3</td></tr><tr id="29146e4d-ea45-8064-9105-e3bbfd9bce1f"><td id="b&gt;Ek" class="">Ⅸ　社会基盤</td><td id="H=td" class="" style="width:82px">47</td><td id="Z~DC" class="" style="width:97px">77</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">港湾取扱貨物量</a></td><td id="EGzK" class="" style="width:48px">万ｔ</td><td id="&gt;eVN" class="" style="width:84px">506</td><td id="`pec" class="" style="width:94px">517</td><td id="Q=MM" class="" style="width:89px">523</td><td id="UH?o" class="" style="width:95px">571</td><td id="qVvt" class="" style="width:91px">587</td></tr><tr id="29146e4d-ea45-8017-ba6d-fd8f6c2301e4"><td id="b&gt;Ek" class="">Ⅸ　社会基盤</td><td id="H=td" class="" style="width:82px">48</td><td id="Z~DC" class="" style="width:97px">78</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆社会資本の維持管理を行う協働団体数</a></td><td id="EGzK" class="" style="width:48px">団体</td><td id="&gt;eVN" class="" style="width:84px">424</td><td id="`pec" class="" style="width:94px">424</td><td id="Q=MM" class="" style="width:89px">424</td><td id="UH?o" class="" style="width:95px">424</td><td id="qVvt" class="" style="width:91px">424</td></tr><tr id="29146e4d-ea45-80d8-a217-e13d3852f82c"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">49</td><td id="Z~DC" class="" style="width:97px">79</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">労働者総数に占める女性の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">37.2</td><td id="`pec" class="" style="width:94px">37.8</td><td id="Q=MM" class="" style="width:89px">38.1</td><td id="UH?o" class="" style="width:95px">38.4</td><td id="qVvt" class="" style="width:91px">38.6</td></tr><tr id="29146e4d-ea45-8099-9624-f6787a69a6e5"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">31,49</td><td id="Z~DC" class="" style="width:97px">80</td><td id="GUOB" class="">女性の全国との賃金格差【再掲】※全国を100とした水準</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">84.4</td><td id="`pec" class="" style="width:94px">85.8</td><td id="Q=MM" class="" style="width:89px">87.0</td><td id="UH?o" class="" style="width:95px">88.2</td><td id="qVvt" class="" style="width:91px">89.4</td></tr><tr id="29146e4d-ea45-8012-976c-c9d66432d251"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">49</td><td id="Z~DC" class="" style="width:97px">81</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">障がい者の雇用率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">2.37</td><td id="`pec" class="" style="width:94px">2.40</td><td id="Q=MM" class="" style="width:89px">2.50</td><td id="UH?o" class="" style="width:95px">2.50</td><td id="qVvt" class="" style="width:91px">2.70</td></tr><tr id="29146e4d-ea45-8080-a472-d03af8bb2924"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">49,50</td><td id="Z~DC" class="" style="width:97px">82</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">高齢者のボランティア活動比率</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">25.3</td><td id="`pec" class="" style="width:94px">26.7</td><td id="Q=MM" class="" style="width:89px">27.4</td><td id="UH?o" class="" style="width:95px">28.1</td><td id="qVvt" class="" style="width:91px">28.9</td></tr><tr id="29146e4d-ea45-808e-ab22-efb7b70c97b4"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">9,49</td><td id="Z~DC" class="" style="width:97px">83</td><td id="GUOB" class="">共働き世帯の男性の家事時間割合[週平均]【再掲】※女性の家事時間に対する割合</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">39.2</td><td id="`pec" class="" style="width:94px">42.5</td><td id="Q=MM" class="" style="width:89px">45.0</td><td id="UH?o" class="" style="width:95px">47.5</td><td id="qVvt" class="" style="width:91px">50.0</td></tr><tr id="29146e4d-ea45-803c-a495-fac68687d7f3"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">49</td><td id="Z~DC" class="" style="width:97px">84</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">◆審議会等委員に占める女性の割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">39.9</td><td id="`pec" class="" style="width:94px">40.0</td><td id="Q=MM" class="" style="width:89px">40.0</td><td id="UH?o" class="" style="width:95px">40.0</td><td id="qVvt" class="" style="width:91px">40.0</td></tr><tr id="29146e4d-ea45-8007-9fc3-c44e5fe372fa"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">50</td><td id="Z~DC" class="" style="width:97px">85</td><td id="GUOB" class=""><a href="https://www.notion.so/29146e4dea458069bcebf0a6bbb785e5?pvs=21">ボランティア・ＮＰＯ・市民活動への参加割合</a></td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">15.6</td><td id="`pec" class="" style="width:94px">17.8</td><td id="Q=MM" class="" style="width:89px">18.9</td><td id="UH?o" class="" style="width:95px">19.5</td><td id="qVvt" class="" style="width:91px">20.0</td></tr><tr id="29146e4d-ea45-8091-a2a9-f4c496d6c23f"><td id="b&gt;Ek" class="">Ⅹ　参画</td><td id="H=td" class="" style="width:82px">49</td><td id="Z~DC" class="" style="width:97px"></td><td id="GUOB" class="">管理職に占める女性の割合</td><td id="EGzK" class="" style="width:48px">％</td><td id="&gt;eVN" class="" style="width:84px">㉙ 12.3</td><td id="`pec" class="" style="width:94px">-</td><td id="Q=MM" class="" style="width:89px">-</td><td id="UH?o" class="" style="width:95px">-</td><td id="qVvt" class="" style="width:91px">-</td></tr></tbody></table><h3 id="29146e4d-ea45-80de-889e-c3d28c617367" class=""></h3><p id="29146e4d-ea45-807e-b5f0-d5886f8b44f5" class="">
+</p><p id="29146e4d-ea45-8079-9c2f-d0fa38e8ab51" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
